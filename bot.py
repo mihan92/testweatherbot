@@ -1,7 +1,8 @@
 # pip install pytelegrambotapi, pyowm
 import telebot
 from telebot import types
-from key import TOKEN  # import from key.py
+from key import TOKEN
+from key import OWMTOKEN  # import from key.py
 from pyowm import OWM
 from pyowm.utils.config import get_default_config
 import create_db
@@ -28,7 +29,7 @@ def wd_msg(message):
 		city = message.text
 		config_dict = get_default_config()
 		config_dict['language'] = 'ru'
-		owm = OWM('dbb85cc4aa757e7bdbb4f1589db8a44d', config_dict )
+		owm = OWM(OWMTOKEN, config_dict )
 		mgr = owm.weather_manager()
 
 		observation = mgr.weather_at_place(city)
