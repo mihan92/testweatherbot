@@ -1,4 +1,3 @@
-# pip istall sqlite3
 import sqlite3
 import telebot
 
