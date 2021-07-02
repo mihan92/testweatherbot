@@ -1,4 +1,3 @@
-# pip install pytelegrambotapi, pyowm
 import telebot
 from telebot import types
 from key import TOKEN
